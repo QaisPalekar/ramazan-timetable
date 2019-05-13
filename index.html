@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+        }
+    </style>
+    <script src="moment.js"></script>
+    <script>
+        console.log(moment().format())
+        window.onload = function () {
+            console.log(document.getElementsByTagName("TR")[1].children[1].innerHTML);
+            let trelems = document.getElementsByTagName("TR")
+            let tdelem;
+            for (let i = 1; i < trelems.length; i++) {
+                tdelem = trelems[i].children[1];
+                if (moment(tdelem.innerHTML).isSame(moment(), 'day')) {
+                    trelems[i].style.backgroundColor = 'red';
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <table border class="resp_table main_si_table">
+        <thead>
+            <tr>
+                <th>Roza</th>
+                <th>Date</th>
+                <th>Sehr </th>
+                <th>Iftaar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>07 May 2019</td>
+                <td>04:49 am</td>
+                <td>07:03 pm</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>08 May 2019</td>
+                <td>04:49 am</td>
+                <td>07:03 pm</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>09 May 2019</td>
+                <td>04:48 am</td>
+                <td>07:04 pm</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>10 May 2019</td>
+                <td>04:47 am</td>
+                <td>07:04 pm</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>11 May 2019</td>
+                <td>04:47 am</td>
+                <td>07:04 pm</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>12 May 2019</td>
+                <td>04:46 am</td>
+                <td>07:05 pm</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>13 May 2019</td>
+                <td>04:46 am</td>
+                <td>07:05 pm</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>14 May 2019</td>
+                <td>04:45 am</td>
+                <td>07:05 pm</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>15 May 2019</td>
+                <td>04:45 am</td>
+                <td>07:06 pm</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>16 May 2019</td>
+                <td>04:44 am</td>
+                <td>07:06 pm</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>17 May 2019</td>
+                <td>04:44 am</td>
+                <td>07:07 pm</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>18 May 2019</td>
+                <td>04:43 am</td>
+                <td>07:07 pm</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>19 May 2019</td>
+                <td>04:43 am</td>
+                <td>07:07 pm</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>20 May 2019</td>
+                <td>04:42 am</td>
+                <td>07:08 pm</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>21 May 2019</td>
+                <td>04:42 am</td>
+                <td>07:08 pm</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>22 May 2019</td>
+                <td>04:41 am</td>
+                <td>07:08 pm</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>23 May 2019</td>
+                <td>04:41 am</td>
+                <td>07:09 pm</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>24 May 2019</td>
+                <td>04:41 am</td>
+                <td>07:09 pm</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>25 May 2019</td>
+                <td>04:40 am</td>
+                <td>07:10 pm</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>26 May 2019</td>
+                <td>04:40 am</td>
+                <td>07:10 pm</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>27 May 2019</td>
+                <td>04:40 am</td>
+                <td>07:10 pm</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>28 May 2019</td>
+                <td>04:39 am</td>
+                <td>07:11 pm</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>29 May 2019</td>
+                <td>04:39 am</td>
+                <td>07:11 pm</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>30 May 2019</td>
+                <td>04:39 am</td>
+                <td>07:12 pm</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>31 May 2019</td>
+                <td>04:38 am</td>
+                <td>07:12 pm</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>01 June 2019</td>
+                <td>04:38 am</td>
+                <td>07:12 pm</td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>02 June 2019</td>
+                <td>04:38 am</td>
+                <td>07:13 pm</td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>03 June 2019</td>
+                <td>04:38 am</td>
+                <td>07:13 pm</td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>04 June 2019</td>
+                <td>04:38 am</td>
+                <td>07:13 pm</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
