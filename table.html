@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timetable</title>
+  <script src="./data-model.js"></script>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    .past {
+        background-color: #B8ADAD;
+    }
+    .present {
+        background-color: #A6E3BB;
+    }
+  </style>
+</head>
+<body>
+  <main style="width: fit-content; margin: auto;">
+    <h1 style="margin: 25px; margin-bottom: 30px; text-decoration: underline; text-underline-offset: 9px; font-weight: 600;">
+        <a href="/">Ramazan Timetable</a>
+    </h1>
+    <div id="main" style="display: flex; gap: 10px; flex-direction: column;"></div>
+  </main>
+
+  <script>
+    const mainDiv = document.getElementById('main');
+    const currentData = getData();
+    data.forEach(item => {
+      const innerDiv = document.createElement('div');
+      innerDiv.classList.add('row');
+      let rozaClass = ''; 
+    
+      if (item.roza < currentData.date.roza) {
+        // rozaClass = 'row';
+        rozaClass = 'past';
+      } else if (item.roza === currentData.date.roza) {
+        // rozaClass = 'row';
+        rozaClass = 'present';
+      }
+
+      if(rozaClass) {
+          innerDiv.classList.add(rozaClass); 
+      }
+      const dateDiv = document.createElement('div');
+      const rozaDiv = document.createElement('div');
+      const sehriDiv = document.createElement('div');
+      const iftarDiv = document.createElement('div');
+
+      const dateSpan = document.createElement('span');
+      dateSpan.textContent = 'Date :';
+
+      const rozaSpan = document.createElement('span');
+      rozaSpan.textContent = 'Roza :';
+      const sehriSpan = document.createElement('span');
+      sehriSpan.textContent = 'Sehri :';
+      const iftarSpan = document.createElement('span');
+      iftarSpan.textContent = 'Iftar :';
+
+      const dateValueSpan = document.createElement('span');
+      dateValueSpan.textContent = `${item.day} / ${item.month}`;
+      const rozaValueSpan = document.createElement('span');
+      rozaValueSpan.textContent = item.roza;
+      const sehriValueSpan = document.createElement('span');
+      sehriValueSpan.textContent = generateDateString(item, 'sehri').split(' ')[1].slice(0, 5);
+      const iftarValueSpan = document.createElement('span');
+      iftarValueSpan.textContent = generateDateString(item, 'iftar').split(' ')[1].slice(0, 5);
+
+      dateDiv.appendChild(dateSpan);
+      dateDiv.appendChild(dateValueSpan);
+      rozaDiv.appendChild(rozaSpan);
+      rozaDiv.appendChild(rozaValueSpan);
+      sehriDiv.appendChild(sehriSpan);
+      sehriDiv.appendChild(sehriValueSpan);
+      iftarDiv.appendChild(iftarSpan);
+      iftarDiv.appendChild(iftarValueSpan);
+
+      innerDiv.appendChild(dateDiv);
+      innerDiv.appendChild(rozaDiv);
+      innerDiv.appendChild(sehriDiv);
+      innerDiv.appendChild(iftarDiv);
+
+      mainDiv.appendChild(innerDiv);
+    });
+  </script>
+</body>
+</html>
