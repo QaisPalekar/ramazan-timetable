@@ -22,8 +22,8 @@ const data = [
             "min": 49
         },
         "asr": {
-            "hour": 24,
-            "min": 48
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -56,8 +56,8 @@ const data = [
             "min": 48
         },
         "asr": {
-            "hour": 24,
-            "min": 48
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -90,8 +90,8 @@ const data = [
             "min": 48
         },
         "asr": {
-            "hour": 24,
-            "min": 48
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -124,8 +124,8 @@ const data = [
             "min": 47
         },
         "asr": {
-            "hour": 24,
-            "min": 48
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -158,8 +158,8 @@ const data = [
             "min": 46
         },
         "asr": {
-            "hour": 24,
-            "min": 47
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -192,8 +192,8 @@ const data = [
             "min": 45
         },
         "asr": {
-            "hour": 24,
-            "min": 47
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -226,8 +226,8 @@ const data = [
             "min": 44
         },
         "asr": {
-            "hour": 24,
-            "min": 47
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -260,8 +260,8 @@ const data = [
             "min": 44
         },
         "asr": {
-            "hour": 24,
-            "min": 46
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -294,8 +294,8 @@ const data = [
             "min": 43
         },
         "asr": {
-            "hour": 24,
-            "min": 46
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -328,8 +328,8 @@ const data = [
             "min": 42
         },
         "asr": {
-            "hour": 24,
-            "min": 46
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -362,8 +362,8 @@ const data = [
             "min": 41
         },
         "asr": {
-            "hour": 24,
-            "min": 45
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -396,8 +396,8 @@ const data = [
             "min": 40
         },
         "asr": {
-            "hour": 24,
-            "min": 45
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -430,8 +430,8 @@ const data = [
             "min": 39
         },
         "asr": {
-            "hour": 24,
-            "min": 45
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -464,8 +464,8 @@ const data = [
             "min": 38
         },
         "asr": {
-            "hour": 24,
-            "min": 45
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -498,8 +498,8 @@ const data = [
             "min": 38
         },
         "asr": {
-            "hour": 24,
-            "min": 44
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -532,8 +532,8 @@ const data = [
             "min": 37
         },
         "asr": {
-            "hour": 24,
-            "min": 44
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -566,8 +566,8 @@ const data = [
             "min": 36
         },
         "asr": {
-            "hour": 24,
-            "min": 44
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -600,8 +600,8 @@ const data = [
             "min": 35
         },
         "asr": {
-            "hour": 24,
-            "min": 43
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -634,8 +634,8 @@ const data = [
             "min": 34
         },
         "asr": {
-            "hour": 24,
-            "min": 43
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -668,8 +668,8 @@ const data = [
             "min": 33
         },
         "asr": {
-            "hour": 24,
-            "min": 43
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -702,8 +702,8 @@ const data = [
             "min": 33
         },
         "asr": {
-            "hour": 24,
-            "min": 42
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -736,8 +736,8 @@ const data = [
             "min": 32
         },
         "asr": {
-            "hour": 24,
-            "min": 42
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -770,8 +770,8 @@ const data = [
             "min": 31
         },
         "asr": {
-            "hour": 24,
-            "min": 42
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -804,8 +804,8 @@ const data = [
             "min": 30
         },
         "asr": {
-            "hour": 24,
-            "min": 42
+            "hour": 5,
+            "min": 8
         },
         "magrib": {
             "hour": 17,
@@ -838,8 +838,8 @@ const data = [
             "min": 29
         },
         "asr": {
-            "hour": 24,
-            "min": 41
+            "hour": 5,
+            "min": 7
         },
         "magrib": {
             "hour": 17,
@@ -872,8 +872,8 @@ const data = [
             "min": 28
         },
         "asr": {
-            "hour": 24,
-            "min": 41
+            "hour": 5,
+            "min": 7
         },
         "magrib": {
             "hour": 17,
@@ -906,8 +906,8 @@ const data = [
             "min": 28
         },
         "asr": {
-            "hour": 24,
-            "min": 41
+            "hour": 5,
+            "min": 7
         },
         "magrib": {
             "hour": 17,
@@ -940,8 +940,8 @@ const data = [
             "min": 27
         },
         "asr": {
-            "hour": 24,
-            "min": 40
+            "hour": 5,
+            "min": 7
         },
         "magrib": {
             "hour": 17,
@@ -974,8 +974,8 @@ const data = [
             "min": 26
         },
         "asr": {
-            "hour": 24,
-            "min": 40
+            "hour": 5,
+            "min": 7
         },
         "magrib": {
             "hour": 17,
@@ -1008,8 +1008,8 @@ const data = [
             "min": 25
         },
         "asr": {
-            "hour": 24,
-            "min": 40
+            "hour": 5,
+            "min": 7
         },
         "magrib": {
             "hour": 17,
@@ -1022,7 +1022,7 @@ const data = [
     }
 ]
 
-function padTime(time) {
+function padTime(time = '') {
     if (time < 10) {
         return `0${time}`;
     } else {
@@ -1049,8 +1049,8 @@ function generateDateString(dateObj, identifier) {
     const year = padTime(dateObj.year);
     const month = padTime(dateObj.month);
     const day = padTime(dateObj.day);
-    const hour = padTime(dateObj[identifier]?.hour || '');
-    const min = padTime(dateObj[identifier]?.min || '');
+    const hour = padTime(dateObj[identifier]?.hour);
+    const min = padTime(dateObj[identifier]?.min);
     return `${year}-${month}-${day} ${hour}:${min}:00`
 }
 
