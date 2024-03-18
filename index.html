@@ -84,11 +84,11 @@
                 generateDateString(currentDate.date, 'sehri').split(' ')[1].slice(0, 5));
             setHTMLValue("iftar-time",
                 generateDateString(currentDate.date, 'iftar').split(' ')[1].slice(0, 5));
-            setHTMLValue("fajr", `${currentDate.date.fajr.hour}:${currentDate.date.fajr.min}`);
-            setHTMLValue("zuhr", `${currentDate.date.zuhr.hour}:${currentDate.date.zuhr.min}`);
-            setHTMLValue("asr", `${currentDate.date.asr.hour}:${currentDate.date.asr.min}`);
-            setHTMLValue("magrib", `${currentDate.date.magrib.hour}:${currentDate.date.magrib.min}`);
-            setHTMLValue("isha", `${currentDate.date.isha.hour}:${currentDate.date.isha.min}`);
+            setHTMLValue("fajr", `${padTime(currentDate.date.fajr.hour)}:${padTime(currentDate.date.fajr.min)}`);
+            setHTMLValue("zuhr", `${padTime(currentDate.date.zuhr.hour)}:${padTime(currentDate.date.zuhr.min)}`);
+            setHTMLValue("asr", `${padTime(currentDate.date.asr.hour)}:${padTime(currentDate.date.asr.min)}`);
+            setHTMLValue("magrib", `${padTime(currentDate.date.magrib.hour)}:${padTime(currentDate.date.magrib.min)}`);
+            setHTMLValue("isha", `${padTime(currentDate.date.isha.hour)}:${padTime(currentDate.date.isha.min)}`);
         })
 
     setInterval(() => {
