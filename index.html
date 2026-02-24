@@ -4,97 +4,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramazan Card</title>
-    <script src="./data-model.js"></script>
+    <title>Ramazan Mubarak</title>
     <link rel="stylesheet" href="index.css">
-</head>
-<body >
-    <main style="width: fit-content; margin: auto;">
-        <h1 style="margin: 25px; margin-bottom: 30px; text-decoration: underline; text-underline-offset: 9px; font-weight: 600;">
-            <a href="/">Ramazan Timetable</a>
-        </h1>
-        <div class="box time-to-start" style="margin-top: 20px; margin-bottom: 30px;">
-            <div class="heading">
-                Time left for <span id="identifier"></span>
-            </div>
-            <div class="time">
-                <span id="hours"></span> : <span id="minutes"></span> : <span id="seconds"></span>
-            </div>
-        </div>
-        
-        <h2 class="box-title">Today</h2>
-        <div class="box box-section" style="margin-bottom: 30px;">
-            <div>
-                <span>Roza</span>
-                <span id="roza"></span>
-            </div>
-            <div>
-                <span>Sehri</span>
-                <span id="sehri-time"></span>
-            </div>
-            <div>
-                <span>Iftar</span>
-                <span id="iftar-time"></span>
-            </div>
-        </div>
+    <script>
+        document.addEventListener('alpine:init', function () {
+            console.log("alpine init")
+            Alpine.data('ramazanApp', () => ({
+                showCalendar: false,
+                timetable: [
+                    { "Roza": "1", "Date": "19 Feb 2026", "Sehr": "05:41 am", "Iftaar": "06:43 pm" },
+                    { "Roza": "2", "Date": "20 Feb 2026", "Sehr": "05:40 am", "Iftaar": "06:44 pm" },
+                    { "Roza": "3", "Date": "21 Feb 2026", "Sehr": "05:40 am", "Iftaar": "06:44 pm" },
+                    { "Roza": "4", "Date": "22 Feb 2026", "Sehr": "05:39 am", "Iftaar": "06:44 pm" },
+                    { "Roza": "5", "Date": "23 Feb 2026", "Sehr": "05:39 am", "Iftaar": "06:45 pm" },
+                    { "Roza": "6", "Date": "24 Feb 2026", "Sehr": "05:38 am", "Iftaar": "06:45 pm" },
+                    { "Roza": "7", "Date": "25 Feb 2026", "Sehr": "05:37 am", "Iftaar": "06:45 pm" },
+                    { "Roza": "8", "Date": "26 Feb 2026", "Sehr": "05:37 am", "Iftaar": "06:46 pm" },
+                    { "Roza": "9", "Date": "27 Feb 2026", "Sehr": "05:36 am", "Iftaar": "06:46 pm" },
+                    { "Roza": "10", "Date": "28 Feb 2026", "Sehr": "05:36 am", "Iftaar": "06:46 pm" },
+                    { "Roza": "11", "Date": "01 Mar 2026", "Sehr": "05:35 am", "Iftaar": "06:47 pm" },
+                    { "Roza": "12", "Date": "02 Mar 2026", "Sehr": "05:34 am", "Iftaar": "06:47 pm" },
+                    { "Roza": "13", "Date": "03 Mar 2026", "Sehr": "05:33 am", "Iftaar": "06:47 pm" },
+                    { "Roza": "14", "Date": "04 Mar 2026", "Sehr": "05:32 am", "Iftaar": "06:48 pm" },
+                    { "Roza": "15", "Date": "05 Mar 2026", "Sehr": "05:32 am", "Iftaar": "06:48 pm" },
+                    { "Roza": "16", "Date": "06 Mar 2026", "Sehr": "05:31 am", "Iftaar": "06:48 pm" },
+                    { "Roza": "17", "Date": "07 Mar 2026", "Sehr": "05:30 am", "Iftaar": "06:48 pm" },
+                    { "Roza": "18", "Date": "08 Mar 2026", "Sehr": "05:29 am", "Iftaar": "06:48 pm" },
+                    { "Roza": "19", "Date": "09 Mar 2026", "Sehr": "05:29 am", "Iftaar": "06:49 pm" },
+                    { "Roza": "20", "Date": "10 Mar 2026", "Sehr": "05:28 am", "Iftaar": "06:49 pm" },
+                    { "Roza": "21", "Date": "11 Mar 2026", "Sehr": "05:27 am", "Iftaar": "06:49 pm" },
+                    { "Roza": "22", "Date": "12 Mar 2026", "Sehr": "05:26 am", "Iftaar": "06:50 pm" },
+                    { "Roza": "23", "Date": "13 Mar 2026", "Sehr": "05:25 am", "Iftaar": "06:50 pm" },
+                    { "Roza": "24", "Date": "14 Mar 2026", "Sehr": "05:24 am", "Iftaar": "06:50 pm" },
+                    { "Roza": "25", "Date": "15 Mar 2026", "Sehr": "05:24 am", "Iftaar": "06:50 pm" },
+                    { "Roza": "26", "Date": "16 Mar 2026", "Sehr": "05:23 am", "Iftaar": "06:51 pm" },
+                    { "Roza": "27", "Date": "17 Mar 2026", "Sehr": "05:22 am", "Iftaar": "06:51 pm" },
+                    { "Roza": "28", "Date": "18 Mar 2026", "Sehr": "05:21 am", "Iftaar": "06:51 pm" },
+                    { "Roza": "29", "Date": "19 Mar 2026", "Sehr": "05:20 am", "Iftaar": "06:51 pm" },
+                    { "Roza": "30", "Date": "20 Mar 2026", "Sehr": "05:19 am", "Iftaar": "06:52 pm" }
+                ],
 
-        <h2 class="box-title">Namaz Timings</h2>
-        <div class="box box-section" style="margin-bottom: 30px;">
-            <div>
-                <span>Fajr</span>
-                <span id="fajr"></span>
-            </div>
-            <div>
-                <span>Zuhr</span>
-                <span id="zuhr"></span>
-            </div>
-            <div>
-                <span>Asr</span>
-                <span id="asr"></span>
-            </div>
-            <div>
-                <span>Magrib</span>
-                <span id="magrib"></span>
-            </div>
-            <div>
-                <span>Isha</span>
-                <span id="isha"></span>
-            </div>
-        </div>
-        <a class="link-btn" href="/table.html">Show Timetable</a>
-    </main>
+                get today() {
+                    const now = new Date();
+                    const day = String(now.getDate()).padStart(2, '0');
+                    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                    const month = monthNames[now.getMonth()];
+                    const year = now.getFullYear();
+                    const dateStr = `${day} ${month} ${year}`;
 
-</body>
-<script>
-    function setHTMLValue(id, value) {
-        document.getElementById(id).innerHTML = value;
-    }
-    function setTimeHtml({ timeDiff, identifier }) {
-        setHTMLValue('identifier', identifier);
-        setHTMLValue('hours', padTime(timeDiff.hours));
-        setHTMLValue('minutes', padTime(timeDiff.minutes));
-        setHTMLValue('seconds', padTime(timeDiff.seconds));
-    }
+                    return this.timetable.find(item => item.Date === dateStr) || this.timetable[0];
+                },
 
-    window.addEventListener('load', () => {
-            const currentDate = getData();
-            setTimeHtml(currentDate);
-            setHTMLValue("roza", currentDate.date.roza);
-            setHTMLValue("sehri-time",
-                generateDateString(currentDate.date, 'sehri').split(' ')[1].slice(0, 5));
-            setHTMLValue("iftar-time",
-                generateDateString(currentDate.date, 'iftar').split(' ')[1].slice(0, 5));
-            setHTMLValue("fajr", `${padTime(currentDate.date.fajr.hour)}:${padTime(currentDate.date.fajr.min)}`);
-            setHTMLValue("zuhr", `${padTime(currentDate.date.zuhr.hour)}:${padTime(currentDate.date.zuhr.min)}`);
-            setHTMLValue("asr", `${padTime(currentDate.date.asr.hour)}:${padTime(currentDate.date.asr.min)}`);
-            setHTMLValue("magrib", `${padTime(currentDate.date.magrib.hour)}:${padTime(currentDate.date.magrib.min)}`);
-            setHTMLValue("isha", `${padTime(currentDate.date.isha.hour)}:${padTime(currentDate.date.isha.min)}`);
+                init() {
+                    console.log('Alpine App Initialized....');
+                }
+            }));
         })
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.7/dist/cdn.min.js"></script>
+</head>
 
-    setInterval(() => {
-        const currentDate = getData();
-        setTimeHtml(currentDate);
+<script>
+    console.log("hello")
+    setTimeout(() => {
+        console.log("hellos ")
+        // console.log(ramazanData)
     }, 1000);
 </script>
+
+<body x-data="ramazanApp">
+    <div class="container">
+        <div class="stars">
+            <template x-for="i in 50" :key="i">
+                <div class="star"
+                    :style="{ top: Math.random() * 90 + '%', left: Math.random() * 90 + '%', animationDelay: Math.random() * 2 + 's' }">
+                </div>
+            </template>
+        </div>
+        <div class="layout" x-show="!showCalendar">
+            <svg class="moon" viewBox="0 0 100 100" fill="currentColor">
+                <path
+                    d="M50 10C30 10 14 26 14 46C14 66 30 82 50 82C55 82 60 81 64 79C54 74 47 64 47 52C47 40 54 30 64 25C60 13 55 10 50 10Z" />
+                <circle cx="70" cy="25" r="2" opacity="0.8" />
+                <circle cx="80" cy="35" r="1.5" opacity="0.6" />
+                <circle cx="85" cy="50" r="2" opacity="0.7" />
+                <circle cx="78" cy="65" r="1.5" opacity="0.5" />
+                <circle cx="65" cy="75" r="1" opacity="0.4" />
+            </svg>
+            <h1>Ramazan Mubarak</h1>
+            <div class="today-date" x-text="'Roza ' + today.Roza">
+                Roza 8
+            </div>
+            <div class="today-time">
+                <div class="time-card">
+                    <p>Sehri time</p>
+                    <p x-text="today.Sehr">05:00 AM</p>
+                </div>
+                <div class="time-card">
+                    <p>Iftar time</p>
+                    <p x-text="today.Iftaar">06:00 PM</p>
+                </div>
+            </div>
+            <button class="btn" @click="showCalendar = true">
+                View Full Calendar
+            </button>
+        </div>
+
+        <div class="calendar-view" x-show="showCalendar" x-cloak>
+            <div class="calendar-header">
+                <h2>Ramazan Timetable</h2>
+                <button class="btn-close" @click="showCalendar = false">&times;</button>
+            </div>
+            <div class="table-container">
+                <table class="calendar-table">
+                    <thead>
+                        <tr>
+                            <th>Roza</th>
+                            <th>Date</th>
+                            <th>Sehri</th>
+                            <th>Iftar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template x-for="day in timetable" :key="day.Roza">
+                            <tr>
+                                <td x-text="day.Roza"></td>
+                                <td x-text="day.Date.split(' ')[0] + ' ' + day.Date.split(' ')[1]"></td>
+                                <td x-text="day.Sehr"></td>
+                                <td x-text="day.Iftaar"></td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
 
 </html>
